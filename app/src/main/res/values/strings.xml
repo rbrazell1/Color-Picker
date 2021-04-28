@@ -1,0 +1,7 @@
+<resources>
+  <string name="app_name">Color Picker</string>
+  <string name="hex_nrgb">HEX: \nRGB</string>
+  <string name="red_formula">Red: %d</string>
+  <string name="green_formula">Green: %d</string>
+  <string name="blue_formula">Blue: %d</string>
+</resources>
