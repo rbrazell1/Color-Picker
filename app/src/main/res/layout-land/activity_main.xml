@@ -15,9 +15,9 @@
     android:layout_margin="@dimen/half_spacing"
     android:padding="@dimen/half_spacing"
     app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintBottom_toTopOf="@id/redBar"
+    app:layout_constraintBottom_toTopOf="@id/alphaVal"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toStartOf="@id/blueVal"
+    app:layout_constraintEnd_toStartOf="@id/colorDisplay"
     app:layout_constraintHorizontal_weight="4"/>
 
   <TextView
@@ -27,10 +27,9 @@
     android:layout_margin="@dimen/half_spacing"
     android:padding="@dimen/half_spacing"
     android:text="@string/alpha_formula"
-    app:layout_constraintTop_toTopOf="@id/alphaBar"
-    app:layout_constraintBottom_toBottomOf="@id/alphaBar"
-    app:layout_constraintStart_toEndOf="@id/alphaBar"
-    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/alphaBar"
+    app:layout_constraintBottom_toTopOf="@id/redBar"
+    app:layout_constraintEnd_toEndOf="@id/alphaBar"
     app:layout_constraintHorizontal_weight="2"/>
 
   <SeekBar
@@ -39,10 +38,10 @@
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/half_spacing"
     android:padding="@dimen/half_spacing"
-    app:layout_constraintTop_toBottomOf="@id/alphaBar"
-    app:layout_constraintBottom_toTopOf="@id/greenBar"
+    app:layout_constraintTop_toBottomOf="@id/alphaVal"
+    app:layout_constraintBottom_toTopOf="@id/redVal"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toStartOf="@id/redVal"
+    app:layout_constraintEnd_toStartOf="@id/colorDisplay"
     android:progressTint="@color/design_default_color_error"
     app:layout_constraintHorizontal_weight="4"/>
 
@@ -51,12 +50,12 @@
     android:layout_width="0dp"
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/half_spacing"
+    android:layout_marginEnd="8dp"
     android:padding="@dimen/half_spacing"
     android:text="@string/red_formula"
-    app:layout_constraintTop_toTopOf="@id/redBar"
-    app:layout_constraintBottom_toBottomOf="@id/redBar"
-    app:layout_constraintStart_toEndOf="@id/redBar"
-    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/redBar"
+    app:layout_constraintBottom_toTopOf="@id/greenBar"
+    app:layout_constraintEnd_toEndOf="@id/redBar"
     app:layout_constraintHorizontal_weight="2"/>
 
   <SeekBar
@@ -65,10 +64,10 @@
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/half_spacing"
     android:padding="@dimen/half_spacing"
-    app:layout_constraintTop_toBottomOf="@id/redBar"
-    app:layout_constraintBottom_toTopOf="@id/blueBar"
+    app:layout_constraintTop_toBottomOf="@id/redVal"
+    app:layout_constraintBottom_toTopOf="@id/greenVal"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toStartOf="@id/greenVal"
+    app:layout_constraintEnd_toStartOf="@id/colorDisplay"
     android:progressTint="@color/design_default_color_secondary_variant"
     app:layout_constraintHorizontal_weight="4"/>
 
@@ -79,10 +78,9 @@
     android:layout_margin="@dimen/half_spacing"
     android:padding="@dimen/half_spacing"
     android:text="@string/green_formula"
-    app:layout_constraintTop_toTopOf="@id/greenBar"
-    app:layout_constraintBottom_toBottomOf="@id/greenBar"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toEndOf="@id/greenBar"
+    app:layout_constraintTop_toBottomOf="@id/greenBar"
+    app:layout_constraintBottom_toTopOf="@id/blueBar"
+    app:layout_constraintEnd_toEndOf="@id/greenBar"
     app:layout_constraintHorizontal_weight="2"/>
 
   <SeekBar
@@ -91,10 +89,10 @@
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/half_spacing"
     android:padding="@dimen/half_spacing"
-    app:layout_constraintTop_toBottomOf="@id/greenBar"
-    app:layout_constraintBottom_toTopOf="@id/colorDisplay"
+    app:layout_constraintTop_toBottomOf="@id/greenVal"
+    app:layout_constraintBottom_toTopOf="@id/blueVal"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toStartOf="@id/blueVal"
+    app:layout_constraintEnd_toStartOf="@id/colorDisplay"
     android:progressTint="@color/teal_700"
     app:layout_constraintHorizontal_weight="4"/>
 
@@ -105,10 +103,9 @@
     android:layout_margin="@dimen/half_spacing"
     android:padding="@dimen/half_spacing"
     android:text="@string/blue_formula"
-    app:layout_constraintTop_toTopOf="@id/blueBar"
-    app:layout_constraintBottom_toBottomOf="@id/blueBar"
-    app:layout_constraintStart_toEndOf="@id/blueBar"
-    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/blueBar"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="@id/blueBar"
     app:layout_constraintHorizontal_weight="2"/>
 
   <View
@@ -117,12 +114,12 @@
     android:layout_height="0dp"
     android:layout_margin="@dimen/half_spacing"
     android:padding="@dimen/half_spacing"
-    app:layout_constraintTop_toBottomOf="@id/blueBar"
+    app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintBottom_toTopOf="@id/displayValue"
-    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintStart_toEndOf="@id/alphaBar"
     app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_weight="3"
     />
-
 
   <TextView
     android:id="@+id/displayValue"
@@ -133,8 +130,8 @@
     android:textIsSelectable="true"
     app:layout_constraintTop_toBottomOf="@id/colorDisplay"
     app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="@id/colorDisplay"
+    app:layout_constraintEnd_toEndOf="@id/colorDisplay"
     />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
