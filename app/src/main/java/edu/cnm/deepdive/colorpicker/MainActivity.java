@@ -1,5 +1,6 @@
 package edu.cnm.deepdive.colorpicker;
 
+import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.widget.SeekBar;
@@ -22,21 +23,25 @@ public class MainActivity extends AppCompatActivity {
   private int greenValInt;
   private int blueValInt;
   private int alphaValInt;
-
   private ActivityMainBinding binding;
-
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     binding = ActivityMainBinding.inflate(getLayoutInflater(), null, false);
-
+    hideAppBar();
     setContentView(binding.getRoot());
     redSeekbar();
     greenSeekbar();
     blueSeekbar();
     alphaSeekbar();
     findColor();
+  }
+
+  private void hideAppBar() {
+    if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+      getSupportActionBar().hide();
+    }
   }
 
   private void findColor() {
