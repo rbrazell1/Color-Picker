@@ -4,4 +4,5 @@
   <string name="red_formula">Red: %d</string>
   <string name="green_formula">Green: %d</string>
   <string name="blue_formula">Blue: %d</string>
+  <string name="alpha_formula">Alpha: %d</string>
 </resources>
